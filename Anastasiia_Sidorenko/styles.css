@@ -1,0 +1,49 @@
+body {
+    padding: 0;
+    margin: 0;
+    background:#F5F5F5;
+    height: 100vh;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #708090;
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+.added-tasks {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.main-caption, .added-tasks__caption {
+    align-self: center;
+}
+
+.task-list {
+    padding: 0;
+    margin: 0;
+}
+
+.task-list__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.task-list__item:nth-child(even) {
+    background-color: #D3D3D3;
+}
