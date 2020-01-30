@@ -79,20 +79,20 @@ function filterDeadline() {
         tomorrow.setHours(0, 0, 0, 0);
         tomorrow.setDate(tomorrow.getDate() + 1);
 
-        var week = new Date();
-        week.setHours(0, 0, 0, 0);
-        week.setDate(week.getDate() + 7);
+        var lastDayOfWeek = new Date();
+        lastDayOfWeek.setHours(0, 0, 0, 0);
+        lastDayOfWeek.setDate(lastDayOfWeek.getDate() + 7);
 
         if (deadlineFilter.value === 'Tomorrow') {
             elementDate.getTime() === tomorrow.getTime() ?
                 removeDeadlineClass(element) :
                 hideDeadlineElement(element);
         } else if (deadlineFilter.value === 'Week') {
-            elementDate.getTime() === week.getTime() ?
+            elementDate.getTime() >= tomorrow.getTime() && elementDate.getTime() <= lastDayOfWeek.getTime() ?
                 removeDeadlineClass(element) :
                 hideDeadlineElement(element);
         } else {
-            removeDeadlineClass(element)
+            removeDeadlineClass(element);
         }
     }
 }
