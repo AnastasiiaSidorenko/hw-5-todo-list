@@ -1,7 +1,8 @@
 body {
     padding: 0;
     margin: 0;
-    background:#F5F5F5;
+    background: url(images/body-image.png) no-repeat;
+    background-size: cover;
     height: 100vh;
     font-family: 'Oxygen', sans-serif;
 }
@@ -18,6 +19,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     position: relative;
+    background: url(images/container-image.jpg) no-repeat;
 }
 
 .added-tasks {
@@ -46,4 +48,8 @@ body {
 
 .task-list__item:nth-child(even) {
     background-color: #D3D3D3;
+}
+
+.hiddenStatus, .hiddenDeadline {
+    display: none;
 }

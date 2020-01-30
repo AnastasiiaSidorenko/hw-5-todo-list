@@ -13,10 +13,22 @@
 <body>
     <div class="container">
         <h1 class="main-caption">TO DO LIST</h1>
-        <div>
+        <div class="tasks-filter">
+            <select id="status-filter">
+                <option>All tasks</option>
+                <option>Completed tasks</option>
+                <option>Uncomplited tasks</option>
+            </select>
+            <select id="deadline-filter">
+                <option>All tasks</option>
+                <option>Tomorrow</option>
+                <option>Week</option>
+            </select>
+        </div>
+        <div class=task-details>
             <input id="task" type="text">
             <input id="deadline" type="date">
-            <button class="add">Add</button>            
+            <button class="add">Add</button>
         </div>
         <div class="added-tasks">
             <h2 class="added-tasks__caption">TO DO</h2>
