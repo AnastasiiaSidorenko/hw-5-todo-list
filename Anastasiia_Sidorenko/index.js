@@ -3,11 +3,14 @@ function addTask() {
     var list = document.getElementById('list');
     var deadline = document.getElementById('deadline');
 
-    if (task.value === "") {
-        alert("Please, add the task!");
+    if (task.value === '') {
+        alert('Please, add the task!');
+    } else if (deadline.value === '') {
+        alert('Please, choose the date!');
     } else {
         list.appendChild(createTask(task.value, deadline.value));
         task.value = '';
+        deadline.value = '';
     }
 }
 

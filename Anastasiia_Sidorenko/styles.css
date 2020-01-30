@@ -45,10 +45,7 @@ body {
     justify-content: space-between;
     padding: 10px 0;
     list-style: none;
-}
-
-.task-list__item:nth-child(even) {
-    background-color: #D3D3D3;
+    border-bottom: 1px solid #404040;
 }
 
 .hiddenStatus, .hiddenDeadline {
